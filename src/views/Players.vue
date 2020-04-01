@@ -1,5 +1,40 @@
 <template>
   <div class="players">
     <h1>This is players page</h1>
+    <div class="requestplayers">
+      <ul id="listeplayers">
+        <li v-for="player in players" :key="player.id">
+          {{ player.pseudo }}
+          <br>{{player.firstName}}
+          <br>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
+
+<script>
+  // @ is an alias to /src
+
+  import axios from 'axios';
+
+  export default {
+    //pour créer des variables qu'on appelle ailleurs avec {{nomdelavariable}}
+    data (){
+      return{
+        players: []
+      }
+
+    },
+    //created() premet de faire une requête au back : l'url a appelé est le endpoints qu'on a besoin pour la requete concernée : à récupérer dans postman
+    //.then() attend la réponse de la requête, on récupere la réponse en faisant res.data et on assimile ce résultat à une variable qu'on a créé dans data
+    created() {
+      axios.get('http://localhost:1991/players')
+              .then(res=>{
+                this.players=res.data;
+              })
+              .catch(err => console.log(err));
+
+    }
+  }
+</script>
