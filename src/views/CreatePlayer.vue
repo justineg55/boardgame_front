@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div class="createplayer">
+        <h1>This is createplayer page</h1>
+    </div>
 </template>
 
 <script>

@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div class="creategame">
+        <h1>This is creategame</h1>
+    </div>
 </template>
 
 <script>

@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div class="games">
+        <h1>This is games page</h1>
+    </div>
 </template>
 
 <script>
