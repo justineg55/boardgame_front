@@ -54,8 +54,8 @@
                     this.topPlayerForAGame.nbWins = res.data.nbVictory;
                     //on fait une deuxième requete en récupérant l'id du joueur qui gagne le plus dans le résultat de la requete précédente et on fait un find by id dans la liste de joueurs pour récupérer son pseudo
                     axios.get(`http://localhost:1991/players/${res.data.winnerId}`)
-                        .then(res => {
-                            this.topPlayerForAGame.pseudo = res.data.pseudo;
+                        .then(res2 => {
+                            this.topPlayerForAGame.pseudo = res2.data.pseudo;
                         })
                         .catch(err => console.log(err));
                 })

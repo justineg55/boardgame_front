@@ -1,6 +1,6 @@
 <template>
     <div class="createplayer">
-        <h1>This is createplayer page</h1>
+        <h1>Ajouter un joueur </h1>
         <!-- appel de la méthode checkform qui check s'il n'y a pas d'erreur dans les différents champs quand on clique sur le bouton -->
         <form @submit="checkForm">
             <!-- on met en place un v-if pour checker les champs non remplis -->

@@ -42,7 +42,6 @@
             axios.get('http://localhost:1991/games')
                 .then(res => {
                     this.games = res.data;
-                    console.log(res.data);
                 })
                 .catch(err => console.log(err));
         }
