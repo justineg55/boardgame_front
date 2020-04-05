@@ -1,6 +1,6 @@
 <template>
     <div class="cardPlayer">
-        <img :src="picture">
+        <img :src="picture" class="img">
         <p> {{player.firstName}} ou {{player.pseudo}} a écrasé ses adversaires {{totalWinsPerPlayer}} fois déjà</p>
     </div>
 </template>
@@ -30,5 +30,10 @@
 </script>
 
 <style scoped>
-
+    .img {
+        object-fit: contain !important;
+        width: 300px !important;
+        height: 300px !important;
+        /*margin: 5% auto 3% !important;*/
+    }
 </style>
